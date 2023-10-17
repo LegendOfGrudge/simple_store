@@ -7,3 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Product.destroy_all
+
+676.times {
+  Product.create(title: Faker::Commerce.product_name, price: Faker::Commerce.price, stock_quantity: Faker::Number.number(digits: 3))
+}
+
+puts "Created #{Product.count} Products"
